@@ -1,0 +1,726 @@
+body {
+    background-color: #fff;
+   }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --bg-color: #000000;
+    --text-color: #fff;
+    --main-color: red;
+}
+header{
+    background-color:#181818;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    transition: all .50s ease;
+}
+.header2{
+    background-color:#181818;
+    overflow: hidden;
+    width: 100%;
+    height: 45px;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 1px 5%;
+}
+.header3{
+    background-color:white;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    top: 10px;;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 30px 5%;
+}
+.header4{
+    position: absolute;
+    background: linear-gradient(
+        to right,
+        #171717 0%,
+        #171717 65%,
+        #000000 35%,
+        #000000 100%
+      );
+    width: 100%;
+    height: 100px;
+    top: 1500px;;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 220px 5%;
+}
+.logo{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 1px;
+    padding: 5px 0;
+    margin:0px 0px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    position: relative;
+    font-family:monospace;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 60px;
+    transition: all .50s ease;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar a.active{
+    color: var(--main-color);
+}
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 5px;
+    margin-left: 40px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+.carousel{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+.carouse2{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+.carousel > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+.slide >img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.slide >p{
+    width: 400px;
+    height: 10%;
+    position: absolute;
+    top: 83%;
+    left: 8%;
+    color: white;
+    font-family: 'Falling Sky', sans-serif;
+    font-size: 15px;
+    stroke: 2px 2px #000000;
+}
+.slide >h1{
+    width: 400px;
+    height: 10%;
+    position: absolute;
+    top: 74%;
+    left: 8%;
+    color: white;
+    font-family: 'Trueno', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    text-shadow: 2px 2px #181818;
+}
+.bt11{
+    display:ruby-base;
+    width: 250px;
+    height: 10%;
+    position: absolute;
+    top: 87%;
+    left: 8%;
+    cursor: pointer;
+    background-color:var(--text-color);
+    color: black;
+    border-width: 3px;
+    border-color: var(--main-color);
+    font-family: 'Komika Axis', sans-serif;
+    font-size: 17px;
+}
+.slide > button:hover,
+.slide > button:focus{
+    color: var(--main-color);
+    background-color: rgba(0, 0, 0, .2);
+    border-color: var(--main-color);
+}
+.slide[data-active]{
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+.carousel-button{
+    width: 50px;
+    font-family: Arial, Helvetica;
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+    border-radius: 10%;
+    padding: 0.2rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+.carousel-button:hover,
+.carousel-button:focus{
+    color: var(--main-color);
+    background-color: rgba(0, 0, 0, .2);
+    border-color: var(--main-color);
+}
+.carousel-button:focus{
+    outline: 1px solid black;
+}
+
+.carousel-button.next{
+    right: 1rem;
+    shape-margin: 0%;
+}
+.vl {
+    border-left: 2px solid white;
+    height: 130px;
+    width: 1px;
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+    left: 5%;
+    color: white;
+    padding: 0.2rem;
+  }
+.v2{
+    border-left: 2px solid gray;
+    height: 50px;
+    width: 1px;
+    position: absolute;
+    z-index: 2;
+    top: 635px;
+    left: 50px;
+    color: white;
+    padding: 0.2rem;
+}
+.b1{
+    top: 20px;
+    align-items: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 32px 0px;
+  }
+.b2{
+    align-items: center;
+    margin-right: 800px;
+    margin-left: 0px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 32px 0px;
+}
+.head1{
+    width: 400px;
+    position: absolute;
+    top: 630px;
+    left: 5%;
+    color: #000000;
+    font-family: 'Trueno', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+}
+.head2{
+    width: 400px;
+    position: absolute;
+    top: 720px;
+    left: 3%;
+    color: #000000;
+    font-family: 'Trueno', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+}
+.b1img{
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    font-family: Arial, Helvetica;
+    z-index: 2;
+    background:url(bakishorts.jpg);
+    border: 2px solid black;
+    font-size: 40px;
+    top: 170px;
+    left: 40px;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-size: cover;
+    box-shadow: 10px 10px #000000;
+}
+.b1img:hover {background-color: #3e8e41}
+
+.b1img:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.b2img{
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    font-family: Arial, Helvetica;
+    z-index: 2;
+    background:url(dumbellset.jpg);
+    border: 2px solid black;
+    font-size: 40px;
+    top: 170px;
+    left: 100px;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-size: cover;
+    box-shadow: 10px 10px #000000;
+    object-fit: cover
+}
+.b2img:hover {background-color: #3e8e41}
+
+.b2img:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.b3img{
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    font-family: Arial, Helvetica;
+    z-index: 2;
+    background:url(headphones.jpg);
+    border: 2px solid black;
+    font-size: 40px;
+    top: 170px;
+    left: 140px;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-size: cover;
+    box-shadow: 10px 10px #000000;
+}
+.b3img:hover {background-color: #3e8e41}
+
+.b3img:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.b4img{
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    font-family: Arial, Helvetica;
+    z-index: 2;
+    background:url(creatine.jpg);
+    border: 2px solid black;
+    font-size: 40px;
+    top: 170px;
+    left: 180px;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-size: cover;
+    box-shadow: 10px 10px #000000;
+}
+.b4img:hover {background-color: #3e8e41}
+
+.b4img:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.b5img{
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    font-family: Arial, Helvetica;
+    z-index: 2;
+    background:url(airpods.jpg);
+    border: 2px solid black;
+    font-size: 40px;
+    top: 220px;
+    left: 40px;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-size: cover;
+    box-shadow: 10px 10px #000000;
+}
+.b5img:hover {background-color: #3e8e41}
+
+.b5img:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.b6img{
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    font-family: Arial, Helvetica;
+    z-index: 2;
+    background:url(boxinggloves.jpg);
+    border: 2px solid black;
+    font-size: 40px;
+    top: 220px;
+    left: 100px;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-size: cover;
+    box-shadow: 10px 10px #000000;
+}
+.b6img:hover {background-color: #3e8e41}
+
+.b6img:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.header4 >img{
+    margin-left: -20px;
+    width: 300px;
+    height: 370px;
+    top:20px;
+    left:20px;
+    object-fit: cover
+}
+.header4 >h1{
+    position: absolute;
+    top: 20px;
+    left: 30%;
+    color: var(--text-color);
+    font-family: 'Trueno', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-shadow: 2px 2px #000000;
+}
+.p1{
+    position: absolute;
+    top: 80px;
+    left: 30%;
+    width: 500px;
+    color: #fff;
+}
+.header4 >h2{
+    position: absolute;
+    top: 20px;
+    left: 68%;
+    color: var(--text-color);
+    font-family: 'Trueno', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-shadow: 2px 2px #000000;
+}
+.p2{
+    position: absolute;
+    top: 120px;
+    left: 68%;
+    width: 500px;
+    color: #fff;
+}
+.duh{
+    position: absolute;
+    left: 50%;
+    top: 1950px;
+    z-index: 100;
+}
+.sizw{
+    position: absolute;
+    top: 20px;
+    left: -100%;
+    height: 150px;
+    width: 100px;
+}
+.duh p{
+    top: 50px;
+    text-align: center;
+}
+.social-icons{
+    margin: 30px auto;
+
+}
+.social-icons img{
+    position: relative;
+    top: -125px;
+    left: 190px;
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 0%;
+}
+.textclass{
+    top: 10px;
+}
+
+@media only screen and (max-width: 1190px){
+    .cu1{
+        display: none;
+    }
+    .cu2{
+        display: none;
+    }
+    .cu3{
+        display: none;
+    }
+    .v2{
+        border-left: 2px solid gray;
+        height: 50px;
+        width: 1px;
+        position: absolute;
+        z-index: 2;
+        top: 635px;
+        left: 10px;
+        color: white;
+        padding: 0.2rem;
+    }
+    .b1img{
+        margin: auto;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        font-family: Arial, Helvetica;
+        z-index: 2;
+        background:url(bakishorts.jpg);
+        border: 2px solid black;
+        top: 180px;
+        left: 10px;
+        cursor: pointer;
+        padding: 0.2rem;
+        background-size: cover;
+        box-shadow: 10px 10px #000000;
+    }
+    .b2img{
+        margin: auto;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        font-family: Arial, Helvetica;
+        z-index: 2;
+        background:url(dumbellset.jpg);
+        border: 2px solid black;
+        top: 180px;
+        left: 50px;
+        cursor: pointer;
+        padding: 0.2rem;
+        background-size: cover;
+        box-shadow: 10px 10px #000000;
+    }
+    .b3img{
+        margin: auto;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        font-family: Arial, Helvetica;
+        z-index: 2;
+        background:url(headphones.jpg);
+        border: 2px solid black;
+        top: 410px;
+        left: -400px;
+        cursor: pointer;
+        padding: 0.2rem;
+        background-size: cover;
+        box-shadow: 10px 10px #000000;
+    }
+    .b4img{
+        margin: auto;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        font-family: Arial, Helvetica;
+        z-index: 2;
+        background:url(airpods.jpg);
+        border: 2px solid black;
+        top: 210px;
+        left: 255px;
+        cursor: pointer;
+        padding: 0.2rem;
+        background-size: cover;
+        box-shadow: 10px 10px #000000;
+    }
+    .b5img{
+        margin: auto;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        font-family: Arial, Helvetica;
+        z-index: 2;
+        background:url(creatine.jpg);
+        border: 2px solid black;
+        top: 450px;
+        left: -197px;
+        cursor: pointer;
+        padding: 0.2rem;
+        background-size: cover;
+        box-shadow: 10px 10px #000000;
+    }
+    .b6img{
+        margin: auto;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        font-family: Arial, Helvetica;
+        z-index: 2;
+        background:url(boxinggloves.jpg);
+        border: 2px solid black;
+        top: 450px;
+        left: -150px;
+        cursor: pointer;
+        padding: 0.2rem;
+        background-size: cover;
+        box-shadow: 10px 10px #000000;
+    }
+    .header4{
+        position: absolute;
+        background: linear-gradient(
+            to right,
+            #171717 0%,
+            #171717 65%,
+            #000000 35%,
+            #000000 100%
+          );
+        width: 100%;
+        height: 100px;
+        top: 1500px;;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        padding: 120px 5%;
+    }
+    .header4 >img{
+        margin-left: -20px;
+        width: 130px;
+        height: 170px;
+        top:20px;
+        left:20px;
+        object-fit: cover
+    }
+    .header4 >h1{
+        position: absolute;
+        top: 20px;
+        left: 30%;
+        color: var(--text-color);
+        font-family: 'Trueno', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-shadow: 2px 2px #000000;
+    }
+    .p1{
+        font-size: 10px;
+        position: absolute;
+        top: 50px;
+        left: 30%;
+        width: 180px;
+        color: #fff;
+    }
+    .header4 >h2{
+        position: absolute;
+        top: 20px;
+        left: 68%;
+        color: var(--text-color);
+        font-family: 'Trueno', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-shadow: 2px 2px #000000;
+    }
+    .p2{
+        font-size: 10px;
+        position: absolute;
+        top: 100px;
+        left: 68%;
+        width: 500px;
+        color: #fff;
+    }
+    .social-icons{
+        margin: 30px auto;
+    
+    }
+    .social-icons img{
+        position: relative;
+        top: -55px;
+        left: 110px;
+        width: 15px;
+        margin: 0 12px;
+        box-shadow: 0 0 20px 0 #7f7f7f3d;
+        cursor: pointer;
+        border-radius: 0%;
+    }
+    .duh p{
+        position: relative;
+        top: 0px;
+        text-align: center;
+    }
+    .navbar a{
+        font-family:monospace;
+        color: var(--text-color);
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 5px 0;
+        margin:0px 30px;
+        transition: all .50s ease;
+    }
+    .main a{
+        margin-right: 5px;
+        margin-left: 40px;
+        color: var(--text-color);
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all .50s ease;
+    }
+    .carouse2{
+        width: 120%;
+        height: 70vh;
+        position: relative;
+    }
+}

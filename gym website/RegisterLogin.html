@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Workout_King</title>
+        <link rel="icon" type="images/x-icon" href="powerlogo.jpg" />
+        <link rel="stylesheet" href="RegisterLogin.css">
+        <script src="RegisterLogin.js" defer></script>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle_btn" onclick="Login()">Login</button>
+                    <button type="button" class="toggle_btn" onclick="Register()">Register</button>
+                </div>
+                <div class="social-icons">
+                    <img src="fb.png">
+                    <img src="tw.png">
+                    <img src="gp.png">
+                </div>
+                <form id="Login" class="input-group" action="RealLogin.php" method="post">
+                    <input type="text" class="input-field" placeholder="Email" required name="Email">
+                    <input type="text" class="input-field" placeholder="Enter Password" required name="Password">
+                    <input type="checkbox" class="chech-box">
+                    <span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Log in</button>
+                </form>
+                <form id="Register" class="input-group" action="Login.php" method="post">
+                    <input type="text" class="input-field" placeholder="first name" required name="Username">
+                    <input type="text" class="input-field" placeholder="last name" required name="Username">
+                    <input type="email" class="input-field" placeholder="email address" required name="Email">
+                    <input type="email" class="input-field" placeholder="physical address" required name="Email">
+                    <input type="email" class="input-field" placeholder="cell phone number" required name="Email">
+                    <input type="text" class="input-field" placeholder="Enter Password" required name="Password">
+                    <input type="text" class="input-field" placeholder="Enter Password" required name="Password">
+                    <input type="checkbox" class="chech-box">
+                    <span>I agree to all terms & conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
