@@ -42,6 +42,10 @@ Access the website through your web server's URL.
 
 ![image](https://github.com/Mrcool199/gymwebsite/assets/119867639/02b765e9-8e63-4647-90df-05aedd9580cc)
 
+![image](https://github.com/Mrcool199/gymwebsite/assets/119867639/a1338977-e6a0-4058-9feb-3bb662705108)
+
+![image](https://github.com/Mrcool199/gymwebsite/assets/119867639/165d09e7-3bf8-43bd-80bc-842ba61a3535)
+
 ![image](https://github.com/Mrcool199/gymwebsite/assets/119867639/1c3531ac-bb3b-4575-afcd-d21ab78c2cc2)
 
 ![image](https://github.com/Mrcool199/gymwebsite/assets/119867639/40383ee2-fbfb-4b9d-a310-b9fe67e46ac7)
